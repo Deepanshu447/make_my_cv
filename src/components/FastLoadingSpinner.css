@@ -1,0 +1,49 @@
+.fast-spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner-ring {
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: fastSpin 0.6s linear infinite;
+}
+
+/* Size variants */
+.fast-spinner.small .spinner-ring {
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+}
+
+.fast-spinner.medium .spinner-ring {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+}
+
+.fast-spinner.large .spinner-ring {
+  width: 24px;
+  height: 24px;
+  border-width: 3px;
+}
+
+/* Color variants */
+.fast-spinner.primary {
+  color: #667eea;
+}
+
+.fast-spinner.white {
+  color: white;
+}
+
+.fast-spinner.secondary {
+  color: #64748b;
+}
+
+@keyframes fastSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
